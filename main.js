@@ -58,24 +58,28 @@ const posts = [
 
 const container = document.getElementById("container");
 
+// Stampa delle informazioni su schermo
 posts.forEach((elem) => {
+
+    let { id, content, media, likes, created, author } = elem
+    let { name, image } = author
 
     container.innerHTML += ` 
     <div class="post">
         <div class="post__header">
             <div class="post-meta">                    
                 <div class="post-meta__icon">
-                    <img class="profile-pic" src="${elem.author.image}" alt="Phil Mangione">                    
+                    <img class="profile-pic" src="${image}" alt="Phil Mangione">                    
                 </div>
                 <div class="post-meta__data">
-                    <div class="post-meta__author">${elem.author.name}</div>
+                    <div class="post-meta__author">${name}</div>
                     <div class="post-meta__time">4 mesi fa</div>
                 </div>                    
             </div>
         </div>
-        <div class="post__text">Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.</div>
+        <div class="post__text">${content}</div>
         <div class="post__image">
-            <img src="${elem.image}" alt="">
+            <img src="${media}" alt="">
         </div>
         <div class="post__footer">
             <div class="likes js-likes">
@@ -86,7 +90,7 @@ posts.forEach((elem) => {
                     </a>
                 </div>
                 <div class="likes__counter">
-                    Piace a <b id="like-counter-1" class="${elem.likes}">80</b> persone
+                    Piace a <b id="like-counter-1" class="${likes}">80</b> persone
                 </div>
             </div> 
         </div>            
