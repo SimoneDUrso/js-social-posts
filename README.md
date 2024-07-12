@@ -32,3 +32,8 @@ Buon lavoro!
 1 - Recuperiamo il pulsante dal DOM;
 2 - Facciamo un forEach per gli oggetti dell'array;
 3 - Inseriamo nel container gli elementi;
+4 - Recupero il pulsante del mi piace;
+5 - Creiamo un array vuoto dove pushamo gli ID 
+6 - Diamo un evento click;
+7 - Assegniamo la classe al bottone per fargli cambiare colore;
+8 - Incrementiamo il counter dei like quando premiamo il bottone;
