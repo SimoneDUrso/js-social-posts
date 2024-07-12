@@ -91,13 +91,13 @@ posts.forEach((elem) => {
                     </a>
                 </div>
                 <div class="likes__counter">
-                    Piace a <b id="like-counter-1" class="${likes}">80</b> persone
+                    Piace a <b id="like-counter-${id}" class="js-likes-counter">${likes}</b> persone
                 </div>
             </div> 
         </div>            
     </div>`
 })
 
-const likeButton = document.querySelector(".like-button");
-
+const likeButton = document.querySelectorAll(".like-button");
+let counter = document.querySelectorAll(".js-likes-counter")
 
